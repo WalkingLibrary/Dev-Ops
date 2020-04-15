@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Script to install general purpose programs
 # Programs this sript installs
 # 1. Bash
@@ -6,6 +6,7 @@
 # 3. Java
 # 4. dos2unix
 # 5. Vim
+# 6. ssh
 
 
 sudo apt-get update -y
@@ -24,6 +25,13 @@ sudo apt-get install dos2unix -y
 
 #Install Vim
 sudo apt-get install vim -y
+
+#Install ssh/Setup
+sudo apt-get install ssh -y
+sudo update-rc.d ssh defaults -y
+sudo systemctl enable ssh.socket -y
+sudo systemctl enabled ssh
+sudo service ssh restart
 
 
 
